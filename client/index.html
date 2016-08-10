@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--ng-app creates the angular module being used  -->
+<html lang="en" ng-app = 'app'>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- connects to our bower components angular folder -->
+  <script src = './angular/angular.js'>
+  </script>
+  <script>
+  // this instantiates our model  first param is name, 
+  var app = angular.module('app', []);
+  // this adds controllers to the module
+  app.controller('divController', function($scope){
+  	 $scope.myName = 'raven';
+  	 $scope.myFavoriteLanguage = 'Python';
+  	 $scope.myFavoriteJSLibrary = 'Angular';
+
+    });
+
+  </script>
+</head>
+<body>
+<div ng-controller='divController'>
+	<p> {{ myName }}, {{ myFavoriteLanguage }}, {{ myFavoriteJSLibrary}}</p>
+	
+
+</div>
+
+</body>
+</html>
